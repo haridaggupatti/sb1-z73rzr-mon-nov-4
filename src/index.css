@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-primary text-white;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply text-gray-200 hover:text-accent transition-colors duration-200;
+  }
+
+  .mobile-nav-link {
+    @apply block w-full px-4 py-2 text-gray-200 hover:bg-primary-light hover:text-accent transition-colors duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-accent hover:bg-accent-dark text-white px-6 py-3 rounded-lg transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary hover:bg-secondary-dark text-white px-6 py-3 rounded-lg transition-colors duration-200;
+  }
+
+  .card {
+    @apply bg-primary-light rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-200;
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.3s ease-out;
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+/* Custom gradient background */
+.bg-mesh {
+  background-color: theme('colors.primary.DEFAULT');
+  background-image: radial-gradient(circle at 50% 50%, theme('colors.primary.light') 0%, transparent 100%),
+    linear-gradient(180deg, theme('colors.primary.DEFAULT') 0%, theme('colors.primary.dark') 100%);
+  background-size: 10px 10px;
+  background-position: 0 0;
+  background-repeat: repeat;
+}
